@@ -22,4 +22,10 @@ export class AppointmentListComponent {
       this.newAppointmentDate = new Date();
     }
   }
+
+  deleteAppointment(id: number) {
+    this.appointments = this.appointments.filter(
+      (appointment) => appointment.id !== id
+    );
+  }
 }
